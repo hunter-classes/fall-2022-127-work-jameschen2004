@@ -40,3 +40,6 @@ def make_out_word(out, word):
 
 def first_two(str):
   return str[0:2]
+
+
+  
