@@ -6,7 +6,9 @@ notated by triple quotes
 or used for docstrings
 '''
 
-print (s1,s2,s3
+s1[1] = (A)
 
-s1[-1]
+print (s1,s2,s3)
+
+print (s1[-1])
 # returns last element

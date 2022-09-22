@@ -19,7 +19,7 @@ def piglatin(name):
    if name[0].lower() == "a" or name[0].lower() == "e" or name[0].lower() == "i" or name[0].lower() == "o" or name[0].lower() == "u":
      return name.lower() + "yay"
    else:
-     return name[1:99] + name[0:1].lower() + "ay"
+     return name[1:] + name[0:1].lower() + "ay"
 
 print(piglatin("bapple"))
 
