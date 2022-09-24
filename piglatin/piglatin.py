@@ -3,7 +3,7 @@
 
 # GitHub username: jameschen2004
 
-# this is my solution to the bondify function and piglatin function
+# this is my solution to the bondify function and updated piglatin function
 
 def bondify(name):
   first = name[0]
@@ -16,11 +16,23 @@ def bondify(name):
 print(bondify("james bond"))
 
 def piglatin(name):
-   if name[0].lower() == "a" or name[0].lower() == "e" or name[0].lower() == "i" or name[0].lower() == "o" or name[0].lower() == "u":
-     return name.lower() + "yay"
-   else:
-     return name[1:] + name[0:1].lower() + "ay"
+  if name[0] in 'AEIOUaeiou':
+     if name[-1] in ".!?,":
+       return name[0:int(len(name))-1] + "yay" + name[-1]
+     else: 
+       return name + "yay"
+  else:
+     if name[0] == name[0].lower():
+       if name[-1] in ".!?,":
+         return name[1:int(len(name))-1] + name[0] + "ay" + name[-1]
+       else: 
+         return name[1:] + name[0] + "ay"
+     else:
+       if name[-1] in ".!?,":
+         return name[1].upper() + name[2:int(len(name))-1] + name[0].lower() + "ay" + name[-1]
+       else:
+         return name[1].upper() + name[2:] + name[0].lower()        + "ay"
 
-print(piglatin("bapple"))
+print(piglatin("Bapple!"))
 
 
