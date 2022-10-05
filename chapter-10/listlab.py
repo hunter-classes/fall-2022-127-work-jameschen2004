@@ -5,7 +5,7 @@
 # these are my functions to the lab hw due 10/13
 
 
-numberlist = [56,1,4,6,5,9,8]
+numberlist = [51,1,4,6,5,9,8]
 numberlistv2 = [1,2,3,4,5,6,7]
 wordlist = ["these", "are", "all", "random", "words"]
 strlist = ["random word", "random letter", "capitalized Letter", "CAPITALIZED WORD!"]
@@ -107,18 +107,17 @@ def five_letter_list(word_list):
 
 print(five_letter_list(wordlist))
 
-def sum_all_evens_minus_one(numlist):
+def sum_all_nums_up_to_one_even(numlist):
   final_sum = 0
-  n = 0
   for num in numlist:
     if num % 2 == 0:
-      if n == 0:
-        n = n + 1
-      else:
-        final_sum = final_sum + num
-  return final_sum
+      return final_sum
+    else:
+      final_sum = final_sum + num
+      
+      
 
-print(sum_all_evens_minus_one(numberlist))
+print(sum_all_nums_up_to_one_even(numberlist))
 
 def sam_stopper_counter(list):
   n = 0
