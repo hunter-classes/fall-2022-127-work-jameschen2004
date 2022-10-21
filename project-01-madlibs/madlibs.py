@@ -1,17 +1,31 @@
-# Extras that I have done are
+'''
+- Instead of specifying the sentences or story to convert, write a
+  story in a file and read it from your program. Make sure to include
+  the file in your repo and that your program reads it correctly.
 
-import madlib_library
+- Add some replacements that are unique, that is, the first time you
+  see them you select on randomly but then you keep reusing that
+  replacement.
+
+- Pay attention to letter case. That is, if you replace a word at the
+  beginning of a sentence, it should be capitalized, otherwise,
+  lowercase. This is except in the case of proper nouns which should
+  always be capitalized. 
+  '''
 import random
+CARTOON_CHAR = ["Spongebob", "Timmy Turner", "Elsa", "Charlie Brown", "Yogi Bear", 
+"Shaggy", "Garfield", "Sonic", "Starfire", "Eric Cartman"]
+PROPER_NOUNS = ["Apple", "Samsung", "Patrick", "Wanda", "Anna", "Snoopy", "Scooby Doo"]
+NOUNS = ["song", "movie", "dog", "cat", "orange", "banana", random.choice(PROPER_NOUNS)]
+VERBS = ["toyed", "sung", "danced", "screamed", "laughed", "ate", "cried"]
 
-CARTOON_CHAR = random.choice(madlib_library.CARTOON_CHAR)
-sentence_structure = madlib_library.SENTENCE_STRUCTURE.split()
-def replace_nouns(sentence_structure):
-    final_sentence_structure = []
-    for noun in sentence_structure:
-        if noun == "<NOUN>":
-            final_sentence_structure.append(random.choice(madlib_library.NOUNS)) 
-    return final_sentence_structure
+f = open("story.txt")
+sentence = f.read
 
-print(replace_nouns(sentence_structure))
-print(random.choice(madlib_library.NOUNS))
-print(sentence_structure)
+print(sentence)
+CARTOON_CHAR = random.choice(CARTOON_CHAR)
+
+
+
+
+#final_sentence = sentence_structure.join()

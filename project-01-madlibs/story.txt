@@ -1,0 +1,2 @@
+<CARTOON_CHAR> <VERB> at the <NOUN>, while the <NOUN> <VERB> at the <NOUN>. 
+<NOUN> saw that opportunity and <VERB> at the <CARTOON_CHAR>.
