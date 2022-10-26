@@ -16,16 +16,15 @@ import random
 CARTOON_CHAR = ["Spongebob", "Timmy Turner", "Elsa", "Charlie Brown", "Yogi Bear", 
 "Shaggy", "Garfield", "Sonic", "Starfire", "Eric Cartman"]
 PROPER_NOUNS = ["Apple", "Samsung", "Patrick", "Wanda", "Anna", "Snoopy", "Scooby Doo"]
-NOUNS = ["song", "movie", "dog", "cat", "orange", "banana", random.choice(PROPER_NOUNS)]
+NOUNS = ["song", "movie", "dog", "cat", "orange", "banana"]
 VERBS = ["toyed", "sung", "danced", "screamed", "laughed", "ate", "cried"]
-
-f = open("story.txt")
-sentence = f.read
-
-print(sentence)
 CARTOON_CHAR = random.choice(CARTOON_CHAR)
 
+f = open("project-01-madlibs/story.txt")
+sentence = f.read()
+sentence = sentence.replace("<NOUN>", random.choice(NOUNS))
+sentence = sentence.replace("<PROPER_NOUN", random.choice(PROPER_NOUNS))
+sentence = sentence.replace("")
+print(sentence)
+print(CARTOON_CHAR)
 
-
-
-#final_sentence = sentence_structure.join()
