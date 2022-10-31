@@ -24,3 +24,12 @@ def freq(l,v):
     return freq_of_num
 
 print(freq(list1,1))
+
+def mode(l):
+    tmode = l[0]
+    for num in l:
+        if (freq(l,num)) > freq(l,tmode):
+            tmode = num
+    return (tmode)
+
+mode(list1)

@@ -1,2 +1,4 @@
-<CARTOON_CHAR> <VERB> at the <NOUN>, while <PROPER_NOUN> <VERB> at the <NOUN>. 
-<PROPER_NOUN> saw that opportunity and <VERB> at the <CARTOON_CHAR>.
+<NOUN>s were left on the tabletop.
+<CARTOON_CHAR> wanted some, so <CARTOON_CHAR> <VERB> at a <NOUN>, while <PROPER_NOUN> <VERB> at a <NOUN>.
+<PROPER_NOUN> saw and <VERB> at <CARTOON_CHAR>. <NOUN>s were no longer on the table.
+ 
