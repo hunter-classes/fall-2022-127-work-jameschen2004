@@ -20,7 +20,7 @@ PROPER_NOUNS = ["Apple", "Samsung", "Patrick", "Wanda", "Anna", "Snoopy", "Scoob
 NOUNS = ["song", "movie", "dog", "cat", "orange", "banana"]
 VERBS = ["shouted", "sung", "danced", "screamed", "laughed", "ate", "cried"]
 
-f = open("project-01-madlibs/story.txt")
+f = open("story.txt")
 sentence = f.read()
 sentence = sentence.replace("<CARTOON_CHAR>", random.choice(CARTOON_CHARS))
 sentence = sentence.split()
