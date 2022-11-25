@@ -15,7 +15,7 @@ import re
 pirate_dict = {}
 unshakespearify_dict = {}
 story_file = open("input.txt")
-capitalize_nouns = ["jack sparrow","romeo","i'll","montague","capulet"]
+capitalize_nouns = ["blackbeard","romeo","Romeo","i'll","montague","capulet"]
 punctuation = [".",",","?","!"]
 
 with open("pirate.dat") as file:
@@ -35,7 +35,7 @@ for word in storyline:
   include = False
   if word[-1] in punctuation:
     for key in pirate_dict.keys():
-      if key == word[:-2]:
+      if key == word[:-1]:
         include = True
         story.append(pirate_dict[key] + word[-1])
     if include == False:
