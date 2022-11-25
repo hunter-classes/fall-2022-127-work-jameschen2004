@@ -7,7 +7,7 @@ The file should have lines in the form “word:translation."
 
 - Have an option to translate different languages.
 
--  Try to tackle more advanced translations like converting parts of
+- Try to tackle more advanced translations like converting parts of
 words rather than straight substitutions or inserting pirate phrases
 at appropriate points in your document.
 """
