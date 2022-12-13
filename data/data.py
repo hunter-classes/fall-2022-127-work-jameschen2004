@@ -1,4 +1,5 @@
 """
+Worked together with Jatin Kapoor
 pandas was installed through 'pip install pandas'
 matplotlib was installed through 'pip install matplotlib'
 graphs displayed through 'sudo apt-get install python3-tk' on Ubuntu terminal
@@ -14,6 +15,7 @@ from matplotlib import pyplot as plt
 import csv
 
 league_data_file = open("league.csv")
+# Read the CSV file using the pandas.read_csv method
 league_data = pd.read_csv(league_data_file, index_col=0)
 print(league_data.astype("string"))
 print("----------")
@@ -28,19 +30,27 @@ print(league_data["blueKills"].max())
 print("----------")
 print("Red Team Kills Data")
 print(league_data["redKills"].describe())
+
+# Find the mean of the redKills column using the pandas.DataFrame.mean method
+mean_red_kills = league_data["redKills"].mean()
+# Find the mode of the redKills column using the pandas.DataFrame.mode method
+mode_red_kills = league_data["redKills"].mode()
+# Print the mean and mode of the redKills column
+print("The mean number of red team kills is: ", mean_red_kills)
+print("The mode number of red team kills is: ", mode_red_kills)
+
+
 fig, (ax0, ax1) = plt.subplots(ncols= 2)
 
-ax0.hist(league_data["blueKills"], bins= 10, density= True, histtype= "bar", color= "turquoise")
-ax0.set_title("Frequency of the Kill Amounts Blue Team Obtains Within 10 Minutes")
-ax1.hist(league_data["redKills"], bins= 10, density= True, histtype= "bar", color= "pink")
-ax1.set_title("Frequency of the Kill Amounts Red Team Obtains Within 10 Minutes")
-
+ax0.hist(league_data["blueKills"], bins= 22, density= False, histtype= "bar", color= "turquoise")
+ax0.set_title("Number of Times each Kill Amount is Reported on the Blue Team Side Within 10 Minutes")
+ax0.set_xlabel("Recorded Total Number of Kills within 10 Minutes")
+ax0.set_ylabel("Recorded Amount of the Same Total Number of Kills")
+ax1.hist(league_data["redKills"], bins= 22, density= False, histtype= "bar", color= "pink")
+ax1.set_title("Number of Times each Kill Amount is Reported on the Red Team Side Within 10 Minutes")
+ax1.set_xlabel("Recorded Total Number of Kills within 10 Minutes")
+ax1.set_ylabel("Recorded Amount of the Same Total Number of Kills")
 plt.show()
 
-print("From these histograms, we can conclude that the kill amount frequencies on both teams are almost identical.")
-#pdBlueSeries = pd.Series(league_data["blueKills"], name = "Blue Team Kills")
-#pdBlueSeries.plot(legend= True)
-#pdRedSeries = pd.Series(league_data["redKills"], name = "Red Team Kills")
-#pdRedSeries.plot(legend= True)
-#plt.show()
+print("From these histograms, we can conclude that the kill amount frequencies on both teams are very similar.")
 
